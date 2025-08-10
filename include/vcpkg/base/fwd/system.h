@@ -15,6 +15,7 @@ namespace vcpkg
         RISCV64,
         LOONGARCH32,
         LOONGARCH64,
+        SW64,
         MIPS64,
     };
 }

@@ -326,6 +326,7 @@ namespace vcpkg
         LLVM_BITCODE = 0x4342, // LLVM bitcode https://www.llvm.org/docs/BitCodeFormat.html#llvm-ir-magic-number
         LOONGARCH32 = 0x6232,  // LoongArch 32-bit processor family
         LOONGARCH64 = 0x6264,  // LoongArch 64-bit processor family
+        SW64 = 0x6564,         // Sunway SW64 processor family
     };
 
     enum class PEType

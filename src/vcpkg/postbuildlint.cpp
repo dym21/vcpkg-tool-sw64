@@ -731,6 +731,7 @@ namespace vcpkg
             case MachineType::LLVM_BITCODE: return "llvm-bitcode";
             case MachineType::LOONGARCH32: return "loongarch32";
             case MachineType::LOONGARCH64: return "loongarch64";
+            case MachineType::SW64: return "sw64";
             default: return fmt::format(FMT_COMPILE("unknown-{}"), static_cast<uint16_t>(machine_type));
         }
     }

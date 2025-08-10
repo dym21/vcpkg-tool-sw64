@@ -9,7 +9,8 @@ endif()
 # builds which have restricted internet access; see azure-pipelines/signing.yml
 # Note that the SHA512 is the same, so vcpkg-tool contributors need not be concerned that we built
 # with different content.
-set(VCPKG_CMAKERC_URL "https://github.com/vector-of-bool/cmrc/archive/refs/tags/2.0.1.tar.gz" CACHE STRING "URL to the cmrc release tarball to use.")
+# 使用本地3party目录中的cmrc源码包
+set(VCPKG_CMAKERC_URL "${CMAKE_CURRENT_SOURCE_DIR}/3party/cmrc-2.0.1.tar.gz" CACHE STRING "URL to the cmrc release tarball to use.")
 
 if(POLICY CMP0135)
     cmake_policy(SET CMP0135 NEW)

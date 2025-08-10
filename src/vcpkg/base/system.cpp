@@ -155,6 +155,7 @@ namespace
         {"riscv64", CPUArchitecture::RISCV64},
         {"loongarch32", CPUArchitecture::LOONGARCH32},
         {"loongarch64", CPUArchitecture::LOONGARCH64},
+        {"sw64", CPUArchitecture::SW64},
         {"mips64", CPUArchitecture::MIPS64},
     };
 }
@@ -301,6 +302,8 @@ namespace vcpkg
         return CPUArchitecture::LOONGARCH32;
 #elif defined(__loongarch64) || defined(__loongarch__) && (__loongarch_grlen == 64)
         return CPUArchitecture::LOONGARCH64;
+#elif defined(__sw_64__) || defined(__sw64__) || defined(_M_SW64)
+        return CPUArchitecture::SW64;
 #elif defined(__mips64)
         return CPUArchitecture::MIPS64;
 #else // choose architecture

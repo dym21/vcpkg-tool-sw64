@@ -285,7 +285,7 @@ TEST_CASE ("parse_tool_data errors", "[tools]")
     REQUIRE(!invalid_arch.has_value());
     CHECK("invalid_arch.json: error: $.tools[0].arch (a CPU architecture): Invalid architecture: notanarchitecture. "
           "Expected one of: x86, x64, amd64, arm, arm64, arm64ec, s390x, ppc64le, riscv32, riscv64, loongarch32, "
-          "loongarch64, mips64" == invalid_arch.error());
+          "loongarch64, sw64, mips64" == invalid_arch.error());
 
     auto invalid_sha512 = parse_tool_data(R"(
 {

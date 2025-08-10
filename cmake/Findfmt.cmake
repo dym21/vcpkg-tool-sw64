@@ -9,7 +9,8 @@ if("$CACHE{VCPKG_FMT_URL}" MATCHES "^https://github.com/fmtlib/fmt/archive/refs/
     unset(VCPKG_FMT_URL CACHE) # Fix upgrade
 endif()
 if(NOT VCPKG_FMT_URL)
-    set(VCPKG_FMT_URL "https://github.com/fmtlib/fmt/archive/refs/tags/11.2.0.tar.gz")
+    # 使用本地3party目录中的fmt源码包
+    set(VCPKG_FMT_URL "${CMAKE_CURRENT_SOURCE_DIR}/3party/fmt-11.2.0.tar.gz")
 endif()
 
 if(POLICY CMP0135)
